@@ -1,141 +1,53 @@
-# 11 Express.js: Note Taker
+# Alex Clayton's Note Taker App
 
-## Your Task
+## Introduction
+This project was developed by Alex Clayton as part of the KU Coding Bootcamp 11-Express Challenge.  This is a note taker app that utilizes Express to link the front end code to the server-side back end.  
 
-Your assignment is to modify starter code to create an application called Note Taker that can be used to write and save notes. This application will use an Express.js back end and will save and retrieve note data from a JSON file.
+## What's in the project?
+The acceptance criteria for this project are as follows:
 
-The application’s front end has already been created. It's your job to build the back end, connect the two, and then deploy the entire application to Heroku.
+1.  WHEN I open the Note Taker
+    THEN I am presented with a landing page with a link to a notes page
 
+    This was included in the starter code provided for this assignment.
 
-## User Story
+2.  WHEN I click on the link to the notes page
+    THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
 
-```
-AS A small business owner
-I WANT to be able to write and save notes
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-```
-
-
-## Acceptance Criteria
-
-```
-GIVEN a note-taking application
-WHEN I open the Note Taker
-THEN I am presented with a landing page with a link to a notes page
-WHEN I click on the link to the notes page
-THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
-```
+    This was achieved with the express() function in a server.js file along with a require funciton to link both the api and html routes js files in the routes folder.
 
 
-## Mock-Up
+3.  WHEN I enter a new note title and the note’s text
+    THEN a Save icon appears in the navigation at the top of the page
 
-The following images show the web application's appearance and functionality:
+    This was included in the starter code provided for this assignement.
 
-![Existing notes are listed in the left-hand column with empty fields on the right-hand side for the new note’s title and text.](./Assets/11-express-homework-demo-01.png)
+4.  WHEN I click on the Save icon
+    THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
 
-![Note titled “Balance accounts” reads, “Balance account books by end of day Monday,” with other notes listed on the left.](./Assets/11-express-homework-demo-02.png)
+    This was achieved in the api.js file utilizing the fs package. The fs.writeFile function writes the note to the db.json file. The fs.readFile function reads the db.json file and creates a variable for the parsed JSON returned. The starter code included the code that displays the new note in the sidebar.
 
+5.  WHEN I click on an existing note in the list in the left-hand column
+    THEN that note appears in the right-hand column
 
-## Getting Started
+    This was included in the starter code, but did require the use of a uuid package which was created in the uuid.js file and imported into the api.js routes file.
 
-On the back end, the application should include a `db.json` file that will be used to store and retrieve notes using the `fs` module.
+6.  WHEN I click on the Write icon in the navigation at the top of the page
+    THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
-The following HTML routes should be created:
-
-* `GET /notes` should return the `notes.html` file.
-
-* `GET *` should return the `index.html` file.
-
-The following API routes should be created:
-
-* `GET /api/notes` should read the `db.json` file and return all saved notes as JSON.
-
-* `POST /api/notes` should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved (look into npm packages that could do this for you).
+    This was included in the starter code and rendered usable once the routes were created.
 
 
-## Bonus
 
-You haven’t learned how to handle DELETE requests, but this application offers that functionality on the front end. As a bonus, try to add the DELETE route to the application using the following guideline:
+## The completed project resembles the following image when deployed:
 
-* `DELETE /api/notes/:id` should receive a query parameter that contains the id of a note to delete. To delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
+Full Size desktop view
 
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria: 
+![full size desktop view](./assets/images/alexclaytonbootcamp.github.io_Module-6-Challenge-Weather-Dashboard_.png)
 
 
-### Technical Acceptance Criteria: 40%
+## URL of the Deployed Application:
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+[Deployed Application](https://alexclaytonbootcamp.github.io/Module-6-Challenge-Weather-Dashboard/)
 
-  * Application front end must connect to an Express.js back end.
-
-  * Application back end must store notes that have a unique id in a JSON file.
-
-  * Application must be deployed to Heroku.
-
-
-### Deployment: 36%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-
-### Application Quality: 11%
-
-* Application console is free of errors.
-
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-### Bonus: +10 Points
-
-* Application allows users to delete notes.
-
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
 
