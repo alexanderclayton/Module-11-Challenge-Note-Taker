@@ -43,11 +43,12 @@ The acceptance criteria for this project are as follows:
 
 Full Size desktop view
 
-![full size desktop view](./assets/images/alexclaytonbootcamp.github.io_Module-6-Challenge-Weather-Dashboard_.png)
+![full size desktop view page 1](/Develop/assets/alex-clayton-note-taker.herokuapp.com_.png)
+![full size desktop view page 2](/Develop/assets/alex-clayton-note-taker.herokuapp.com_notes.png)
 
 
 ## URL of the Deployed Application:
 
-[Deployed Application](https://alexclaytonbootcamp.github.io/Module-6-Challenge-Weather-Dashboard/)
+[Deployed Application](https://alex-clayton-note-taker.herokuapp.com/)
 
 
