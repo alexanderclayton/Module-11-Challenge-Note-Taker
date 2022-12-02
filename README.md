@@ -43,8 +43,8 @@ The acceptance criteria for this project are as follows:
 
 Full Size desktop view
 
-![full size desktop view page 1](/Develop/assets/alex-clayton-note-taker.herokuapp.com_.png)
-![full size desktop view page 2](/Develop/assets/alex-clayton-note-taker.herokuapp.com_notes.png)
+![full size desktop view page 1](/assets/alex-clayton-note-taker.herokuapp.com_.png)
+![full size desktop view page 2](/assets/alex-clayton-note-taker.herokuapp.com_notes.png)
 
 
 ## URL of the Deployed Application:
