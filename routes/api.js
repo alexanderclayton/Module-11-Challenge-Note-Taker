@@ -26,10 +26,10 @@ module.exports = app => {
         });
 
         function writeNotes() {
-            fs.writeFile('./db/db.json', JSON.stringify(notes, 'utf8', err => {
+            fs.writeFile('./db/db.json', JSON.stringify(notes), 'utf8', err => {
                 if (err) throw err;
                 return true;
-            }));
+            });
         }
     });
 };
